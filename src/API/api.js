@@ -1,6 +1,6 @@
 import Axios from 'axios';
 
-const key = import.meta.env.VITE_API_KEY;
+const key = '81cea525';
 
 // Get movies by search
 const fetchMovies = async (query, signal) => {
