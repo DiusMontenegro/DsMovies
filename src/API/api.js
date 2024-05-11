@@ -1,11 +1,11 @@
-import Axios from 'axios';
+import axios from 'axios';
 
 const key = '81cea525';
 
 // Get movies by search
 const fetchMovies = async (query, signal) => {
     try {
-        const response = await Axios.get(
+        const response = await axios.get(
             `http://www.omdbapi.com/?apikey=${key}&s=${query}`,
             { signal }
         );
@@ -19,7 +19,7 @@ const fetchMovies = async (query, signal) => {
 // Get movies by id
 const fetchMovie = async (id) => {
     try {
-        const response = await Axios.get(
+        const response = await axios.get(
             `http://www.omdbapi.com/?apikey=${key}&i=${id}`
         );
         return response.data;
