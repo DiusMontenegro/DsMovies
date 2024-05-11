@@ -6,7 +6,7 @@ const key = '81cea525';
 const fetchMovies = async (query, signal) => {
     try {
         const response = await axios.get(
-            `http://www.omdbapi.com/?apikey=${key}&s=${query}`,
+            `https://www.omdbapi.com/?apikey=${key}&s=${query}`,
             { signal }
         );
         return response.data.Search;
@@ -20,7 +20,7 @@ const fetchMovies = async (query, signal) => {
 const fetchMovie = async (id) => {
     try {
         const response = await axios.get(
-            `http://www.omdbapi.com/?apikey=${key}&i=${id}`
+            `https://www.omdbapi.com/?apikey=${key}&i=${id}`
         );
         return response.data;
     } catch (error) {
